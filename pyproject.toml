@@ -1,9 +1,12 @@
 [tool.poetry]
-name = "gendiff"
+name = "hexlet-code"
 version = "0.1.0"
 description = "second project"
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
+packages = [
+  { include = "gendiff" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.11"
