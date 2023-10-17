@@ -1,5 +1,6 @@
 import argparse
 import json
+from gendiff.scripts.formatter import stringify
 
 
 def generate_diff(file_path1, file_path2):
@@ -13,13 +14,13 @@ def load_file(file_path):
     return _json
 
 
-def calculate_diff(json1, json2):
+def calculate_diff(json1, json2):   
     all_keys = sorted(json1.keys() | json2.keys())
     final_string = ''
 
     for key in all_keys:
-        value_1 = json1.get(key)
-        value_2 = json2.get(key)
+        value_1 = stringify(json1.get(key))
+        value_2 = stringify(json2.get(key))
         if value_2 is None:
             final_string += f'  - {key}: {value_1}\n'
         elif value_1 is None:
