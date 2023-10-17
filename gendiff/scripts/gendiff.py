@@ -14,7 +14,7 @@ def load_file(file_path):
     return _json
 
 
-def calculate_diff(json1, json2):   
+def calculate_diff(json1, json2):
     all_keys = sorted(json1.keys() | json2.keys())
     final_string = ''
 
