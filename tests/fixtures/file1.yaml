@@ -1,0 +1,19 @@
+all:
+  children:
+    control_nodes:
+      hosts:
+        node1:
+          custom_hostname: suyos01a.svl.ibm.com
+          management_network:
+            network1:
+              ip: 9.30.16.141
+        node2:
+          custom_hostname: suyos01b.svl.ibm.com
+          management_network:
+            network1:
+              ip: 9.30.16.142
+        node3:
+          custom_hostname: suyos01c.svl.ibm.com
+          management_network:
+            network1:
+              ip: 9.30.16.143
